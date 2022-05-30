@@ -4,6 +4,10 @@ date: 2022-05-28T20:05:21+08:00
 enableMath: false
 toc: true
 draft: false
+tags:
+- cs144
+categories:
+- cs144
 summary: 本文主要记录在完成 [cs144](https://cs144.github.io/) 课程 Lab 的过程中遇到的问题。
 ---
 
@@ -18,6 +22,16 @@ summary: 本文主要记录在完成 [cs144](https://cs144.github.io/) 课程 La
 ## Lab4 部分翻译。
 
 注意，这里不是 Lab4 的全文翻译。此处包含了 Lab4 要求的大部分点，但更建议搭配原文使用。
+
+### 1 Overview
+
+Figure 1: The arrangement of modules and dataflow in your TCP implementation.
+
+![Figure 1: The arrangement of modules and dataflow in your TCP implementation](figure1.png)
+
+### 2 Getting started
+
+我们给出了类 `CS144TCPSocket`，这个类包装了你的 `TCPConnection` 实现，使它表现的像是你在 Lab0 webget 中使用的 TCPSocket 一样。这次 Lab 结束时，你需要稍微修改你的 webget 使用 `CS144TCPSocket`。
 
 ### 3 Lab 4: The TCP connection
 
@@ -131,3 +145,14 @@ TCPConnection 的一个重要的功能是决定何时 TCP connection 完全结�
 任意时刻，当前提条件 1 到 3 全部满足。
 - 如果 `_linger_after_streams_finish` 为 `false`，连接进入终止状态(`active()` 返回 `false`)。
 - 否则，你需要等一会(linger)：自从上次接收到片段又经过足够多时间(10 倍 `_cfg.rt_timeout`)后终止。
+
+## Lab 5 总结
+
+这次 Lab 主要实现一个网络接口：网络报文和数据链路层以太网帧之间的桥梁。
+
+之前的 Lab 中，我们实现了 TCP 协议，可是如何交换 TCP 片段呢？有以下几个选项：
+- TCP-in-UDP-in-IP。这是最简单的方法。我们使用内核提供的 UDP 接口。
+- TCP-in-IP。 这是一般的情况。Linux 提供了一种 TUN 设备接口，允许我们提供整个网络报文，内核负责剩下的部分。
+- TCP-in-IP-in-Ethernet。上面几种选项，我们都在依赖 Linux 的网络栈。第三种选项，我们直接构造以太网帧，交给 Linux TAP 设备 —— 类似 TUN 设备，但是更底层，它交换数据链路帧而不是 IP 报文。
+
+具体来说，我们需要实现网络地址和物理地址的翻译，并实现一部分 ARP 协议。
