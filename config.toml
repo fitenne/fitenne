@@ -1,0 +1,139 @@
+baseURL = "https://blog.fitenne.com"
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "zh-cn"
+# language code
+languageCode = "zh-cn"
+title = "fitenne's blog"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "FixIt"
+
+[params]
+  # FixIt theme version
+  version = "0.2.X"
+  keywords = ["blog"]
+  gitRepo = "https://github.com/fitenne/fitenne"
+  dateFormat = "2006-01-02"
+
+  [params.search]
+    enable = true
+    # type of search engine ("lunr", "algolia")
+    type = "lunr"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # FixIt NEW | 0.2.1 max number of results length
+    maxResultLength = 10
+    # FixIt NEW | 0.2.3 snippet length of the result
+    snippetLength = 30
+    # FixIt NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # FixIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+   absoluteURL = false
+
+  [params.header]
+    # FixIt CHANGED | 0.2.13 desktop header mode ("sticky", "normal", "auto")
+    desktopMode = "sticky"
+    # FixIt CHANGED | 0.2.13 mobile header mode ("sticky", "normal", "auto")
+    mobileMode = "auto"
+    # FixIt NEW | 0.2.0 Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = "/icon.svg"
+      # title name
+      name = "fitenne's blog"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # FixIt NEW | 0.2.5 whether to use typeit animation for title name
+      typeit = true
+  
+  [params.footer]
+    enable = true
+    # FixIt NEW | 0.2.0 Custom content (HTML format is supported)
+    custom = ''
+    # FixIt NEW | 0.2.0 whether to show Hugo and theme info
+    hugo = true
+    # FixIt NEW | 0.2.0 whether to show copyright info
+    copyright = true
+    # FixIt NEW | 0.2.0 whether to show the author
+    author = true
+    # Site creation year
+    since = 2022
+    # FixIt NEW | 0.2.14 Site creation time
+    # siteTime = '' # e.g. '2019-02-03T19:30:34+08:00'
+    # FixIt NEW | 0.2.14 whether to show total word count of site content
+    wordCount = false
+    # FixIt NEW | 0.2.12 Public network security only in China (HTML format is supported)
+    # gov = ""
+    # ICP info only in China (HTML format is supported)
+    # icp = ""
+    # license info (HTML format is supported)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  [params.home]
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # FixIt NEW | 0.2.13 Gravatar mirror site domain, default: "www.gravatar.com"
+      # FixIt CHANGED | 0.2.14 FixIt DELETED | 0.2.15 The parameter `home.profile.gravatarSite` is deprecated since v0.2.14, use `gravatar.host` instead
+      # gravatarSite = ""
+      # Gravatar Email for preferred avatar in home page
+      # gravatarEmail = "yangke@fitenne.com"
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.png"
+      # FixIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
+      title = ""
+      # subtitle shown in home page
+      # subtitle = "This is My New Hugo Site"
+      # whether to use typeit animation for subtitle
+      # typeit = true
+      # whether to show social links
+      social = true
+      # FixIt NEW | 0.2.0 disclaimer (HTML format is supported)
+      disclaimer = ""
+
+  [params.social]
+    GitHub = "https://github.com/fitenne"
+    Email = "yangke@fitenne.com"
+
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/Lruihao/FixIt/issues/43)
+    noClasses = false
+
