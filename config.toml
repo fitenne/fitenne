@@ -96,7 +96,7 @@ theme = "FixIt"
       disclaimer = ""
 
   [params.social]
-    GitHub = "https://github.com/fitenne"
+    GitHub = "fitenne"
     Email = "yangke@fitenne.com"
 
 
