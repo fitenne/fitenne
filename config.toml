@@ -97,7 +97,7 @@ theme = "FixIt"
 
   [params.social]
     GitHub = "fitenne"
-    Email = "yangke@fitenne.com"
+    Email = "ke@fitenne.com"
 
 
 
@@ -137,3 +137,9 @@ theme = "FixIt"
     # false is a necessary configuration (https://github.com/Lruihao/FixIt/issues/43)
     noClasses = false
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
