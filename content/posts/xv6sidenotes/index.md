@@ -4,7 +4,7 @@ subtitle:
 draft: false
 date: 2024-06-19
 description:
-keywords:
+keywords: xv6 riscv
 license:
 comment: false
 weight: 0
@@ -14,7 +14,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRss: false
 hiddenFromRelated: false
-summary:
+summary: "yet another time killer"
 resources:
 toc: true
 math: true
@@ -360,4 +360,4 @@ Program Headers:
 
 nettests 中有 dns test，里面使用的 dns server 为 8.8.8.8。在国内的网络环境下，由于众所周知的原因请求有几率失败，看起来测试的代码没有「超时」的检测，一旦请求失败测试会卡在这一步。将 dns 服务器换成 119.29.29.29 后没有发现卡在 dns test 这一步骤。
 
-[1]: riscv-spec-20191213 (https://github.com/riscv/riscv-isa-manual/releases/tag/20240411)
+[^1]: riscv-spec-20191213 (https://github.com/riscv/riscv-isa-manual/releases/tag/20240411)

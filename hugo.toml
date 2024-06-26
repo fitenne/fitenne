@@ -11,7 +11,7 @@
 # -------------------------------------------------------------------------------------
 
 # website title
-title = "foobar!"
+title = "foobar !"
 # Hostname (and path) to the root
 baseURL = "https://blog.foobar.one"
 # theme list
@@ -323,7 +323,7 @@ enableEmoji = true
   # Author Configuration
   [params.author]
     name = "林刈"
-    email = "blogger@foobar.one"
+    email = "fitenne@qq.com"
     link = ""
     avatar = "/images/avatar.png"
 
@@ -500,17 +500,17 @@ enableEmoji = true
     rss = 10
     # Home page profile
     [params.home.profile]
-      enable = false
+      enable = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "/images/avatar.png"
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
-      title = ""
+      title = "Move"
       # subtitle shown in home page
-      subtitle = ""
+      subtitle = "Slowly..."
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -525,7 +525,7 @@ enableEmoji = true
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = "fitenne"
+    GitHub = "https://github.com/fitenne"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -642,7 +642,7 @@ enableEmoji = true
   # FixIt 0.2.12 | NEW PanguJS config
   [params.pangu]
     # For Chinese writing
-    enable = false
+    enable = true
     selector = "article" # FixIt 0.2.17 | NEW
 
   # FixIt 0.2.12 | NEW Watermark config
@@ -707,7 +707,7 @@ enableEmoji = true
 
   # Cookie consent config
   [params.cookieconsent]
-    enable = true
+    enable = false
     # text strings used for Cookie consent banner
     [params.cookieconsent.content]
       message = ""
@@ -751,7 +751,7 @@ enableEmoji = true
 
   # FixIt 0.2.16 | NEW Reading progress bar
   [params.readingProgress]
-    enable = false
+    enable = true
     # Available values: ["left", "right"]
     start = "left"
     # Available values: ["top", "bottom"]
@@ -804,7 +804,7 @@ enableEmoji = true
     # FixIt 0.2.18 | CHANGED if set to "force", images in the content will be forced to shown as the gallery.
     lightgallery = false
     # whether to enable the ruby extended syntax
-    ruby = true
+    ruby = false
     # whether to enable the fraction extended syntax
     fraction = true
     # whether to enable the fontawesome extended syntax
@@ -816,9 +816,9 @@ enableEmoji = true
     # FixIt 0.3.0 | NEW whether to show link to view source code of the post
     linkToSource = true
     # FixIt 0.3.0 | NEW whether to show link to edit the post
-    linkToEdit = true
+    linkToEdit = false
     # FixIt 0.3.0 | NEW whether to show link to report issue for the post
-    linkToReport = true
+    linkToReport = false
     # whether to show the full text content in RSS
     rssFullText = false
     # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...]
@@ -942,8 +942,8 @@ enableEmoji = true
     # social share links in post page
     [params.page.share]
       enable = true
-      Twitter = true
-      Facebook = true
+      Twitter = false
+      Facebook = false
       Linkedin = false
       Whatsapp = false
       Pinterest = false
